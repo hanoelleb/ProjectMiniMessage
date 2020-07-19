@@ -1,3 +1,4 @@
+var moment = require('moment');
 
 const MessageRoster = (() => {
     var messages = [];
@@ -13,7 +14,8 @@ const MessageRoster = (() => {
 })();
 
 const MessageFactory = (user, content, date) => {
-    return {user,content,date};
+    return {user,content, date: moment(date)
+	        .format('MMMM Do YYYY, h:mm:ss a')};
 }
 
 exports.MessageRoster = MessageRoster;

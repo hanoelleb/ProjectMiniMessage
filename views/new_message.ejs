@@ -2,13 +2,14 @@
 <html>
     <head>
 	<title>New Message</title>
+	<link rel='stylesheet' href='/stylesheets/style.css' />
     </head>
     <body>
 	<h2>Post Message</h2>
         <form method='POST' action='/new'>
             <input name='user' type='text' placeholder='user'></input>
-            <textarea name='content' placeholder='Your message...'></textarea>
-	    <input type='submit'></input>
+            <textarea name='content' rows=8 cols=40 placeholder='Your message...'></textarea>
+	    <input type='submit' value='Send'></input>
         </form>
         <a href='/'>Go back</a>
     </body>
